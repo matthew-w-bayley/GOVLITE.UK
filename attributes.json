@@ -1,0 +1,116 @@
+[
+    {
+        "name": "surname",
+        "positions": [{"x": -235, "y": 470, "n": 1}, {"x": -230, "y": 483, "n": 6}],
+        "description": "The surname of the prospective license holder",
+        "multiple": false,
+        "group": 1
+    },
+    {
+        "name": "forenames",
+        "positions": [{"x": -235, "y": 450, "n": 1}, {"x": -230, "y": 465, "n": 6}],
+        "description": "The forenames of the prospective license holder (including any middle names)",
+        "multiple": false,
+        "group": 1
+    },
+    {
+        "name": "previous_names",
+        "positions": [{"x": -305, "y": 400, "n": 1}],
+        "description": "details of any previous names or maiden names",
+        "multiple": true,
+        "group": 1
+    },
+    {
+        "name" : "DoB",
+        "positions": [{"x": -235, "y": 290, "n": 1}],
+        "description": "the date you were born",
+        "multiple": false,
+        "group": 2
+    },
+    {
+        "name" : "nationality",
+        "positions": [{"x": -235, "y": 272, "n": 1}],
+        "description": "your nationality",
+        "multiple": false,
+        "group": 2
+    },
+    {
+        "name" : "residency_address",
+        "positions": [{"x": -305, "y": 180, "n": 1}],
+        "description": "the address you currently live at",
+        "multiple": false,
+        "group": 2
+    },
+    {
+        "name" : "post_town",
+        "positions": [{"x": -305, "y": 70, "n": 1}],
+        "description": "the town you currently live at",
+        "multiple": false,
+        "group": 2
+    },
+    {
+        "name" : "post_code",
+        "positions": [{"x": -105, "y": 70, "n": 1}],
+        "description": "the post code you currently live at",
+        "multiple": false,
+        "group": 2
+    },
+    {
+        "name" : "telephone_number",
+        "positions": [{"x": -210, "y": 31, "n": 1}, {"x": -210, "y": 8, "n": 1}, {"x": -210, "y": -14, "n": 1}],
+        "description": "",
+        "multiple": false,
+        "group": 2
+    },
+    {
+        "name" : "fax_number",
+        "positions": [{"x": -210, "y": 662, "n": 2}],
+        "description": "",
+        "multiple": false,
+        "group": 2
+    },
+    {
+        "name" : "email_address",
+        "positions": [{"x": -305, "y": 625, "n": 2}],
+        "description": "",
+        "multiple": false,
+        "group": 2
+    },
+    {
+        "name" : "correspondence_address",
+        "positions": [{"x": -305, "y": 495, "n": 2}],
+        "description": "",
+        "multiple": false,
+        "group": 2
+    },
+    {
+        "name" : "correspondance_post_town",
+        "positions": [{"x": -305, "y": 400, "n": 2}],
+        "description": "",
+        "multiple": false,
+        "group": 2
+    },
+    {
+        "name" : "correspondance_post_code",
+        "positions": [{"x": -67, "y": 400, "n": 2}],
+        "description": "",
+        "multiple": false,
+        "group": 2
+    },
+    {
+        "name" : "correspondance_phone_number",
+        "positions": [{"x": -210, "y": 357, "n": 2}, {"x": -210, "y": 335, "n": 2}, {"x": -210, "y": 312, "n": 2}],
+        "description": "",
+        "multiple": false,
+        "group": 2
+    },
+    {
+        "name" : "correspondance_email_address",
+        "positions": [{"x": -302, "y": 280, "n": 2}],
+        "description": "",
+        "multiple": false,
+        "group": 2
+    }
+]
+
+
