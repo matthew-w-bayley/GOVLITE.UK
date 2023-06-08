@@ -1,2 +1,3 @@
 *.pdf
 !Application.pdf
+__pycache__
