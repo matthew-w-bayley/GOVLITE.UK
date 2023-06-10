@@ -24,7 +24,10 @@
                     </tr>
                     <tr>
                         <td class="rt">PREVIOUS NAMES</td>
-                        <td>
+                        <td v-if="previous_names.length == 0">
+                            NONE
+                        </td>
+                        <td v-if="previous_names.length != 0">
                             <div v-for="name, index in previous_names">
                                 <table>
                                     <tr>
