@@ -10,6 +10,15 @@
                 <p>Your personal details</p>
                 <table>
                     <tr>
+                        <td>Title</td>
+                        <td>
+                            <p v-for="_title in titles">
+                                <input type="radio" :id="_title" :value="_title" v-model="title"/>
+                                <label :for="_title">{{_title}}</label>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>Surname</td>
                         <td><input v-model="surname" style="width:100%;"></td>
                     </tr>
@@ -22,6 +31,8 @@
                         </td>
                     </tr>
                 </table>
+                I have had previous names (includes any maiden names) <input type="checkbox" id="checkbox" v-model="checked" />
+                <br><br>
                 <button>CONTINUE</button>
             </div>
             <div v-if="stage == 5">

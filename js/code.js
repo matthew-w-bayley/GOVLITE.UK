@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        titles: ["Mr", "Mrs", "Miss", "Ms", "Dr"],
         title: "MR",
         surname: "",
         forenames: "",
