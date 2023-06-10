@@ -6,6 +6,25 @@
     </head>
     <body>
         <main id="app">
+            <div v-if="stage == 1">
+                <p>Your personal details</p>
+                <table>
+                    <tr>
+                        <td>Surname</td>
+                        <td><input v-model="surname" style="width:100%;"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Forenames
+                        </td>
+                        <td>
+                            <input v-model="forenames" style="width:100%;">
+                        </td>
+                    </tr>
+                </table>
+                <button>CONTINUE</button>
+            </div>
+            <div v-if="stage == 5">
             <h1 class="center" style="text-decoration:underline">Application for a Personal License</h1>
             <h1>1. Application Personal Details</h1>
             <div style="padding-left:70px; padding-right:70px;">
@@ -244,6 +263,13 @@
                 </table>
             </div>
             <h1>Disclosure of convictions and civil immigration penalties and declaration</h1>
+            <h1>Further Supporting Documents</h1>
+            <h2>Photograph endorsed as a true likeness of me by a solicitor or notary</h2>
+            <h2>Licensing Qualification Certificate / Proof of prescribed description</h2>
+            <h2>Proof of Right to work in the UK</h2>
+            <h2>Criminal Conviction Certificate / Criminal Record Certificate / Results of a subject access search of the police national computer by the national identification service (DBS Check)</h2>
+            <h2>Proof of payment of fee for the application</h2>
+            </div>
         </main>
     </body>
     <script src="js/code.js"></script>

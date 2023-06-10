@@ -2,8 +2,8 @@ var app = new Vue({
     el: '#app',
     data: {
         title: "MR",
-        surname: "surname",
-        forenames: "forenames",
+        surname: "",
+        forenames: "",
         previous_names: [{"forenames": "jesus christ", "surname": "surnamehere"}],
         date_of_birth: "date of birth",
         nationality: "British",
@@ -24,6 +24,7 @@ var app = new Vue({
         correspondence_phone_evening: "correspondence phone",
         correspondence_phone_mobile: "correspondence phone",
         correspondence_fax: "correspondence fax",
+        stage: 1,
     },
     methods: {
         getCurrentDateAndTime() {
