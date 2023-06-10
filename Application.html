@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <title>Application</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <main id="app">
+            <h1 class="center" style="text-decoration:underline">Application for a Personal License</h1>
+            <h1>1. Application Personal Details</h1>
+            <div style="padding-left:70px; padding-right:70px;">
+                <table>
+                    <tr>
+                        <td class="rt">TITLE</td>
+                        <td>{{title}}</td>
+                    </tr>
+                    <tr>
+                        <td class="rt">SURNAME</td>
+                        <td>{{surname}}</td>
+                    </tr>
+                    <tr>
+                        <td class="rt">FORENAMES</td>
+                        <td>{{forenames}}</td>
+                    </tr>
+                    <tr>
+                        <td class="rt">PREVIOUS NAMES</td>
+                        <td>
+                            <div v-for="name, index in previous_names">
+                                <table>
+                                    <tr>
+                                        <td>SURNAME</td>
+                                        <td>{{name.surname}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FORENAMES</td>
+                                        <td>{{name.forenames}}</td>
+                                    </tr>
+                                </table>
+                                <br v-if="index+1 < previous_names.length">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rt">DATE OF BIRTH</td>
+                        <td>{{date_of_birth}}</td>
+                    </tr>
+                    <tr>
+                        <td class="rt">NATIONALITY</td>
+                        <td>{{nationality}}</td>
+                    </tr>
+                    <tr>
+                        <td class="rt">OVER 18?</td>
+                        <td>{{over_18}}</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <td colspan="2" class="center"><b>CONTACT DETAILS FOR APPLICANT</b></td>
+
+                    </tr>
+                    <tr>
+                        <td class="rt">ADDRESS</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>ADDRESS</td>
+                                    <TD>{{applicant_address}}</TD>
+                                </tr>
+                                <tr>
+                                    <td>POST CODE</td>
+                                    <td>{{applicant_postcode}}</td>
+                                </tr>
+                                <tr>
+                                    <td>POST TOWN</td>
+                                    <td>{{applicant_posttown}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rt">TELEPHONE NUMBERS</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>DAYTIME</td>
+                                    <TD>{{applicant_phone_daytime}}</TD>
+                                </tr>
+                                <tr>
+                                    <td>EVENING</td>
+                                    <td>{{applicant_phone_evening}}</td>
+                                </tr>
+                                <tr>
+                                    <td>MOBILE</td>
+                                    <td>{{applicant_phone_mobile}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>E-MAIL ADDRESS</td>
+                        <td>{{applicant_email}}</td>
+                    </tr>
+                    <tr>
+                        <td>FAX NUMBER</td>
+                        <td>{{applicant_fax}}</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <td colspan="2" class="center"><b>CONTACT DETAILS FOR CORRESPONDENCE</b></td>
+
+                    </tr>
+                    <tr>
+                        <td class="rt">ADDRESS</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>ADDRESS</td>
+                                    <TD>{{correspondence_address}}</TD>
+                                </tr>
+                                <tr>
+                                    <td>POST CODE</td>
+                                    <td>{{correspondence_postcode}}</td>
+                                </tr>
+                                <tr>
+                                    <td>POST TOWN</td>
+                                    <td>{{correspondence_posttown}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rt">TELEPHONE NUMBERS</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>DAYTIME</td>
+                                    <TD>{{correspondence_phone_daytime}}</TD>
+                                </tr>
+                                <tr>
+                                    <td>EVENING</td>
+                                    <td>{{correspondence_phone_evening}}</td>
+                                </tr>
+                                <tr>
+                                    <td>MOBILE</td>
+                                    <td>{{correspondence_phone_mobile}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>E-MAIL ADDRESS</td>
+                        <td>{{correspondence_email}}</td>
+                    </tr>
+                    <tr>
+                        <td>FAX NUMBER</td>
+                        <td>{{correspondence_fax}}</td>
+                    </tr>
+                </table>
+            </div>
+            <h1>2. Licensing Qualifications</h1>
+            <table>
+                <tr>
+                    <td>Name of qualification</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Date of issue</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Issuing Body</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <h1>3. Previous or outstanding applications for a personal licence</h1>
+            <table>
+                <tr>
+                    <td>Currently Hold Personal License:</td>
+                    <td></td>
+                </tr>
+            </table>
+            <h1>4. Checklist</h1>
+            <h1>5. Declaration</h1>
+            <h1>Disclosure of convictions and civil immigration penalties and declaration</h1>
+        </main>
+    </body>
+    <script src="js/code.js"></script>
+</html>
