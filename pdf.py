@@ -21,3 +21,19 @@ def write_text_on_pdf(input_path, output_path, page_number, x, y, text):
     with open(output_path, "wb") as out:
         pdf_writer.write(out)
     system("rm temp.pdf")
+
+def write_image_on_pdf(input_path, output_path, page_number, x, y, width, height, image_path):
+    pdf = canvas.Canvas("temp.pdf", pagesize=A4)
+    pdf.translate(x, y) # move origin point of canvas
+    pdf.drawImage(image_path, x, y, width=width, height=height)
+    pdf.save() # export the watermark
+
+    pdf_reader = PdfReader(open(input_path, "rb"))
+    pdf_writer = PdfWriter()
+    pdf_reader.pages[page_number].merge_page(PdfReader(open("temp.pdf", "rb")).pages[0])
+    for page in pdf_reader.pages:
+        pdf_writer.add_page(page)
+    with open(output_path, "wb") as out:
+        pdf_writer.write(out)
+    system("rm temp.pdf")
+
