@@ -24,5 +24,15 @@ var app = new Vue({
         correspondence_phone_evening: "correspondence phone",
         correspondence_phone_mobile: "correspondence phone",
         correspondence_fax: "correspondence fax",
+    },
+    methods: {
+        getCurrentDateAndTime() {
+            const dateTime = new Date();
+            return dateTime.toLocaleString();
+        },
     }
 })
+
+/*
+https://stackoverflow.com/questions/22087076/how-to-make-a-simple-image-upload-using-javascript-html
+  */
