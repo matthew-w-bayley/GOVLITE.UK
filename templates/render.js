@@ -3,7 +3,7 @@ const fs = require('fs');
 nunjucks = require('nunjucks')
 nunjucks.configure([
     "../node_modules/govuk-frontend/",
-    "."
+    ".", ".."
   ])
 
 
