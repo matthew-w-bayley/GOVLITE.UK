@@ -16,7 +16,13 @@ app.set('views', 'views');
 app.set('view engine', 'jade');
 app.use('/assets', express.static('assets'))
 app.get('/',function(req,res){      
-    res.sendFile(path.resolve('./templates/main.html'));
+    res.sendFile(path.resolve('./templates/home.html'));
+});
+app.get('/alcohol-licensing/personal-license-application',function(req,res){      
+  res.sendFile(path.resolve('./templates/personal-license-application.html'));
+});
+app.get('/alcohol-licensing/premises-license-application',function(req,res){      
+  res.sendFile(path.resolve('./templates/premises-license-application.html'));
 });
 
 http.createServer(app).listen(8080);
