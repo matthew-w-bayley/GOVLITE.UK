@@ -2,7 +2,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
 {% block pageTitle %}Apply for a personal License{% endblock %}
 {% block head %}<link href="/assets/main.css" rel="stylesheet">{% endblock %}
@@ -24,6 +24,23 @@
       text: "Unnoficial"
     },
     html: 'This is NOT an official government service - it is NOT produced or mainained by any government body'
+  }) }}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/"
+      },
+      {
+        text: "Alcohol Licensing",
+        href: "/alcohol-licensing"
+      },
+      {
+        text: "Personal License Application",
+        href: "/alcohol-licensing/personal-license-application"
+      }
+    ]
   }) }}
 {% endblock %}
 
