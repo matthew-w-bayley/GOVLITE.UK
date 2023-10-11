@@ -1,0 +1,77 @@
+{% extends "govuk/template.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+
+{% block pageTitle %}Apply for a personal License{% endblock %}
+{% block head %}<link href="/assets/main.css" rel="stylesheet">{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Apply for a personal License",
+    serviceUrl: "/alcohol-licensing/personal-license-application/q1",
+    navigation: []
+  }) }}
+
+
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Unnoficial"
+    },
+    html: 'This is NOT an official government service - it is NOT produced or mainained by any government body'
+  }) }}
+{% endblock %}
+
+{% block content %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "/alcohol-licensing/personal-license-application"
+}) }}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+<span class="govuk-caption-l">Question 1 of 9</span>
+{{ govukRadios({
+  name: "Citizenship",
+  hint: {
+    text: "If you or your parents were born in the UK, you might automatically be a British citizen."
+  },
+  fieldset: {
+    legend: {
+      text: "What is your citizenship?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "is_citizen",
+      text: "British or Irish citizen"
+    },
+    {
+      value: "not_citizen",
+      text: "Not a British or Irish citizen"
+    }
+  ]
+}) }}
+    {{ govukButton({
+    text: "Continue",
+    href: "#",
+    isStartButton: false
+  }) }}
+{% endblock %}
+
+
+
+
+{% block bodyEnd %}
+  {# Run JavaScript at end of the <body>, to avoid blocking the initial render. #}
+  <script src="/assets/govuk.js"></script>
+  <script>window.GOVUKFrontend.initAll()</script>
+{% endblock %}
