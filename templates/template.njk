@@ -1,6 +1,6 @@
 {% from "govuk/components/skip-link/macro.njk" import govukSkipLink -%}
 {% from "./custom-header/macro.njk" import govukHeader -%}
-{% from "govuk/components/footer/macro.njk" import govukFooter -%}
+{% from "./custom-footer/macro.njk" import govukFooter -%}
 <!DOCTYPE html>
 <html lang="{{ htmlLang | default('en') }}" class="govuk-template {{ htmlClasses }}">
   <head>
@@ -52,7 +52,7 @@
     {% endblock %}
 
     {% block footer %}
-      {{ govukFooter({}) }}
+      {{ govukFooter({contentLicence : "copy ri"}) }}
     {% endblock %}
 
     {% block bodyEnd %}{% endblock %}
