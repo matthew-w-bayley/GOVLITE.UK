@@ -1,12 +1,20 @@
+const fs = require('fs');
+
 nunjucks = require('nunjucks')
 nunjucks.configure([
     "../node_modules/govuk-frontend/",
     "."
   ])
-var res = nunjucks.render('main.njk');
-var res2 = nunjucks.render('application.njk');
 
-const fs = require('fs');
 
-fs.writeFile('main.html', res, err => {if (err) {console.error(err);}});
-fs.writeFile('application.html', res2, err => {if (err) {console.error(err);}});
+async function ls(path) {
+  const dir = await fs.promises.opendir(path)
+  for await (const dirent of dir) {
+    var filename = dirent.name;
+    if (filename.slice(filename.length - 3) == "njk"){
+      var res = nunjucks.render(filename);
+      fs.writeFile(filename.slice(0, filename.length-4) + ".html", res, err => {if (err) {console.error(err);}});
+    }
+  }
+}
+ls('.').catch(console.error)
