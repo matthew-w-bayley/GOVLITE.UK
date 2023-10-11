@@ -28,7 +28,43 @@
 {% endblock %}
 
 {% block content %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
+{{ govukBackLink({
+  text: "Back",
+  href: "#"
+}) }}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+<span class="govuk-caption-l">Question 1 of 9</span>
+{{ govukRadios({
+  name: "Citizenship",
+  hint: {
+    text: "If you or your parents were born in the UK, you might automatically be a British citizen."
+  },
+  fieldset: {
+    legend: {
+      text: "What is your citizenship?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "is_citizen",
+      text: "British or Irish citizen"
+    },
+    {
+      value: "not_citizen",
+      text: "Not a British or Irish citizen"
+    }
+  ]
+}) }}
+    {{ govukButton({
+    text: "Continue",
+    href: "#",
+    isStartButton: false
+  }) }}
 {% endblock %}
 
 
