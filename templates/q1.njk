@@ -9,9 +9,9 @@
 
 {% block header %}
   {{ govukHeader({
-    homepageUrl: "#",
+    homepageUrl: "/",
     serviceName: "Apply for a personal License",
-    serviceUrl: "/",
+    serviceUrl: "/alcohol-licensing/personal-license-application/q1",
     navigation: []
   }) }}
 
@@ -32,7 +32,7 @@
 
 {{ govukBackLink({
   text: "Back",
-  href: "#"
+  href: "/alcohol-licensing/personal-license-application"
 }) }}
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
