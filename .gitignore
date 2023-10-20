@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-*.pdf
-!Application.pdf
-__pycache__
-=======
+# certs
+certs
+
 # Logs
 logs
 *.log
@@ -138,4 +136,3 @@ dist
 *.html
 
 
->>>>>>> with-govuk-frontend
