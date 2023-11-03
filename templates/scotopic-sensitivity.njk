@@ -1,0 +1,41 @@
+{% extends "./template.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{% block pageTitle %}Apply for a personal License{% endblock %}
+{% block head %}<link href="/assets/main.css" rel="stylesheet">{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Scotopic Sensitivity Syndrome",
+    serviceUrl: "/health/scotopic-sensitivity-syndrome",
+    navigation: []
+  }) }}
+
+
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-xl">Scotopic Sensitivity Syndrome</h1>
+  <p class="govuk-body">Scotopic Sensitivity affects the way in which the brain processes and interprets visual information.</p>
+  <p class="govuk-body">Use this service to </p>
+  <p class="govuk-body">This does not serve as a substitute for any medical
+                    examination, but can be an effective way of testing
+                    for the best tinted spectacles/overlays without paying
+                    for a specialist examination.:</p>
+
+    {{ govukButton({
+    text: "Start now",
+    href: "/medical/scotopic-sensitivity",
+    isStartButton: true
+  }) }}
+{% endblock %}
+
+{% block bodyEnd %}
+  {# Run JavaScript at end of the <body>, to avoid blocking the initial render. #}
+  <script src="/assets/govuk.js"></script>
+  <script>window.GOVUKFrontend.initAll()</script>
+{% endblock %}
