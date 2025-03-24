@@ -29,14 +29,23 @@
 
 {% block content %}
 <h1 class="govuk-heading-xl">Welcome to GOVLITE.UK</h1>
-<h1 class="govuk-heading-l">Accessibility can be dangerous</h1>
-<p class="govuk-body">GOV.UK has an incredible dedication to their design system</p>
-<h1 class="govuk-heading-l">Services</h1>
-<ul class="govuk-list">
-  <li>
-    <a class="govuk-link" href="/alcohol-licensing/personal-license-application">Personal License Application</a>
-  </li>
+
+<h1 class="govuk-heading-l">Issues of Accessibility</h1>
+<p class="govuk-body"><a class="govuk-link" href="https://gov.uk/">GOV.UK</a> has an incredible dedication to their design system, they have a huge community working on making websites for government services accessible for as many users as possible</p>
+<p class="govuk-body">The approach of the <a class="govuk-link" href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service (GDS)</a> is to make the design system as accessible as possible, and to do this, they have published the design system as open source on <a class="govuk-link" href="https://github.com/alphagov/govuk-frontend">GitHub</a> and available as a package on <a class="govuk-link" href="https://www.npmjs.com/package/govuk-frontend">npm</a>.</p>
+<p class="govuk-body">This design system can be installed and used by anyone, and makes it incredibly easy to emulate a government service. In a world where we use GOV.UK for many essential services (tax, benefits, identity, etc.), it's incredibly important to consider the malicious use of this system.</p>
+<p class="govuk-body">Is it more important to make design systems accessible, or to minimise malicious intent.</p>
+
+<h1 class="govuk-heading-l">A phishing example</h1>
+<p class="govuk-body">To demonstrate potential for the malicious use of this system, take a look at this <a class="govuk-link" href="/personal">example personal license application</a> webpage. This application requires:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Your debit/credit card</li>
+  <li>A digital certificate of licensing qualification</li>
+  <li>Passport-style photograph</li>
+  <li>DBS Check</li>
 </ul>
+<p class="govuk-body">all of which could be used in incredibly malicious ways.</p>
+
 {% endblock %}
 
 {% block bodyEnd %}
