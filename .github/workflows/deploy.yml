@@ -33,7 +33,7 @@ jobs:
           node render.js --base-url /GOVLITE.UK/
           mkdir -p ../.output/public/
           mv *.html ../.output/public/
-          mv assets ../.output/public/
+          mv ../assets ../.output/public/
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
