@@ -24,7 +24,8 @@ jobs:
         run: |
           mkdir -p public/assets/
           cp -r node_modules/govuk-frontend/govuk public/assets/
-          cp -r node_modules/govuk-frontend/govuk /templates/
+          mkdir -p templates/
+          cp -r node_modules/govuk-frontend/govuk templates/
 
       - name: Build
         run: |
