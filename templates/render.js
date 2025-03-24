@@ -1,16 +1,15 @@
 const fs = require('fs');
 
 nunjucks = require('nunjucks')
-nunjucks.configure([
-    "../node_modules/govuk-frontend/",
-    ".", ".."
-  ])
+nunjucks.configure('.', { autoescape: true });
 
+const env = new nunjucks.Environment(new nunjucks.FileSystemLoader('.'), {
+  autoescape: true,
+  noCache: true
+});
 
-// --base-url can be passed
-if (process.argv.length > 2) {
-  nunjucks.addGlobal('base_url', process.argv[2]);
-}
+const BASE_URL = "/GOVLITE.UK/";
+env.addGlobal('base_url', BASE_URL);
 
 async function ls(path) {
   const dir = await fs.promises.opendir(path)

@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Move govuk framework to templates/
-        run: mv node_modules/govuk-frontend/govuk/ templates/
+        run: cp -r node_modules/govuk-frontend/govuk public/assets/
 
       - name: Build
         run: |
