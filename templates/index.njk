@@ -30,6 +30,12 @@
 {% block content %}
 <h1 class="govuk-heading-xl">Welcome to GOVLITE.UK</h1>
 
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{{ govukInsetText({
+  text: "A demonstration of how the GOV.UK design system can be used to easily create a phishing website."
+}) }}
+
 <h1 class="govuk-heading-l">Issues of Accessibility</h1>
 <p class="govuk-body"><a class="govuk-link" href="https://gov.uk/">GOV.UK</a> has an incredible dedication to their design system, they have a huge community working on making websites for government services accessible for as many users as possible</p>
 <p class="govuk-body">The approach of the <a class="govuk-link" href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service (GDS)</a> is to make the design system as accessible as possible, and to do this, they have published the design system as open source on <a class="govuk-link" href="https://github.com/alphagov/govuk-frontend">GitHub</a> and available as a package on <a class="govuk-link" href="https://www.npmjs.com/package/govuk-frontend">npm</a>.</p>
