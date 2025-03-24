@@ -24,7 +24,11 @@ jobs:
         run: mv node_modules/govuk-frontend/govuk/ templates/
 
       - name: Build
-        run: cd templates && node render.js && mv *.html ../.output/public/
+        run: |
+          cd templates
+          node render.js
+          mkdir -p ../.output/public/
+          mv *.html ../.output/public/
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
