@@ -26,7 +26,7 @@ jobs:
       - name: Build
         run: |
           cd templates
-          node render.js
+          node render.js --base-url /GOVLITE.UK/
           mkdir -p ../.output/public/
           mv *.html ../.output/public/
       

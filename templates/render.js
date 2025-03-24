@@ -7,6 +7,11 @@ nunjucks.configure([
   ])
 
 
+// --base-url can be passed
+if (process.argv.length > 2) {
+  nunjucks.addGlobal('base_url', process.argv[2]);
+}
+
 async function ls(path) {
   const dir = await fs.promises.opendir(path)
   for await (const dirent of dir) {
