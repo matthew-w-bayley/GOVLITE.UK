@@ -5,7 +5,7 @@
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
 {% block pageTitle %}Apply for a personal License{% endblock %}
-{% block head %}<link href="/assets/main.css" rel="stylesheet">{% endblock %}
+{% block head %}<link href="{{ base_url }}assets/main.css" rel="stylesheet">{% endblock %}
 
 {% block header %}
   {{ govukHeader({
@@ -19,12 +19,6 @@
 {% endblock %}
 
 {% block beforeContent %}
-  {{ govukPhaseBanner({
-    tag: {
-      text: "Unnoficial"
-    },
-    html: 'This is NOT an official government service. This is NOT produced or mainained by ANY government body'
-  }) }}
 
   {{ govukBreadcrumbs({
     items: [
@@ -62,7 +56,7 @@
   </p>
     {{ govukButton({
     text: "Start now",
-    href: "/alcohol-licensing/personal-license-application/q1",
+    href: "{{ base_url }}warning.html",
     isStartButton: true
   }) }}
   <h1 class="govuk-heading-l">Before you start</h1>
@@ -85,6 +79,6 @@
 
 {% block bodyEnd %}
   {# Run JavaScript at end of the <body>, to avoid blocking the initial render. #}
-  <script src="/assets/govuk.js"></script>
+  <script src="{{ base_url }}assets/govuk.js"></script>
   <script>window.GOVUKFrontend.initAll()</script>
 {% endblock %}

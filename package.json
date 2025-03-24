@@ -18,9 +18,10 @@
   "homepage": "https://github.com/nohumanman/personal-licence-application#readme",
   "dependencies": {
     "express": "^4.19.2",
-    "govuk-frontend": "^4.7.0",
+    "govuk-frontend": "^4.9.0",
     "http": "^0.0.1-security",
     "https": "^1.0.0",
+    "i": "^0.3.7",
     "nunjucks": "^3.2.4",
     "sass": "^1.69.2"
   }

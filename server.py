@@ -5,7 +5,7 @@ application = app
 
 @app.route('/')
 def root():
-    return render_template("home.html")
+    return render_template("index.html")
 
 @app.route("/alcohol-licensing/personal-license-application")
 def alcohol_licensing_personal_license_application():

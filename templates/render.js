@@ -1,18 +1,21 @@
 const fs = require('fs');
 
 nunjucks = require('nunjucks')
-nunjucks.configure([
-    "../node_modules/govuk-frontend/",
-    ".", ".."
-  ])
+nunjucks.configure('.', { autoescape: true });
 
+const env = new nunjucks.Environment(new nunjucks.FileSystemLoader('.'), {
+  autoescape: true,
+  noCache: true
+});
+
+const BASE_URL = "/GOVLITE.UK/";
 
 async function ls(path) {
   const dir = await fs.promises.opendir(path)
   for await (const dirent of dir) {
     var filename = dirent.name;
     if (filename.slice(filename.length - 3) == "njk"){
-      var res = nunjucks.render(filename);
+      var res = nunjucks.render(filename, { base_url: BASE_URL });
       fs.writeFile(filename.slice(0, filename.length-4) + ".html", res, err => {if (err) {console.error(err);}});
     }
   }
